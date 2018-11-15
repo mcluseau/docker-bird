@@ -31,5 +31,5 @@ run echo "DESTDIR contains:" \
  && cd /build && find
 
 from alpine:3.8
-entrypoint ["/usr/sbin/bird"]
+entrypoint ["/usr/sbin/bird","-f"]
 copy --from=build /build /
