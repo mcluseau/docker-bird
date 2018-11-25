@@ -31,5 +31,8 @@ run echo "DESTDIR contains:" \
  && cd /build && find
 
 from alpine:3.8
+
+run apk add --update ncurses readline
+
 entrypoint ["/usr/sbin/bird","-f"]
 copy --from=build /build /
